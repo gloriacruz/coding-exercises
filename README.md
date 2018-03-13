@@ -1,2 +1,7 @@
 # spare-time-exercises
-c++ code of my spare time coding exercises
+C++ code of my spare time coding exercises, including:
+* Longest increasing subsequence
+* Sorting algorithms
+* Count the paths
+* Cover the border
+* Etc.
