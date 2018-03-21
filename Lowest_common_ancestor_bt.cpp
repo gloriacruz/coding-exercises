@@ -40,3 +40,33 @@ public:
       return left ? left : right;
     }
 };
+
+//Driver code
+int main() {
+  //Build a binary tree
+  TreeNode *three = new TreeNode(3);
+  TreeNode *six = new TreeNode(6);
+  TreeNode *eight = new TreeNode(8);
+  TreeNode *two = new TreeNode(2);
+  TreeNode *eleven = new TreeNode(11);
+  TreeNode *nine = new TreeNode(9);
+  TreeNode *five = new TreeNode(5);
+  TreeNode *thirdteen = new TreeNode(13);
+  TreeNode *seventeen = new TreeNode(17);
+
+  three->left = six;
+  three->right = eight;
+  six->left = two;
+  six->right = eleven;
+  eleven->left = nine;
+  eleven->right = five;
+  eight->right = thirdteen;
+  thirdteen->left = seventeen;
+
+  Solution *sol = new Solution;
+  TreeNode *LCA = (*sol).lowestCommonAncestor(three, two, five);
+
+
+  cout<<"Lowest Common Ancestor is: " << LCA->val;
+  return 0;
+}
