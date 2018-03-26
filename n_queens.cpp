@@ -48,8 +48,10 @@ bool safe(Position* pos){
 bool placeQueenInRow(int x, int start, int n){
   for(int i=start; i<n; i++){
     Position* position = new Position(x,i);
+    //cout << "tried " << position->x << "," << position->y << endl;
     if(safe(position)){
       queens.push_back(position);
+      //cout << "pushed " << position->x << "," << position->y << endl;
       if(x+1 < n){
         if(placeQueenInRow(x+1, 0, n)){//place queen in row
           return true;
@@ -59,6 +61,7 @@ bool placeQueenInRow(int x, int start, int n){
         return true;//found 1 solution
     }
   }
+  queens.pop_back();
   return false;//couldn't place queen in row
 }
 
@@ -78,7 +81,7 @@ vector<vector<Position*>> solveNQueens(int n) {
 
 int main(){
 
-  vector<vector<Position*>> solutions = solveNQueens(5);
+  vector<vector<Position*>> solutions = solveNQueens(4);
   for(auto solution : solutions){
       cout << "Solution " << endl;
     for(auto queen : solution){
