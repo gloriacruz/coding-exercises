@@ -1,4 +1,3 @@
-// Your last Python code is saved below:
 #include <vector>
 #include <iostream>
 #include <math.h>
