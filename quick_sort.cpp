@@ -3,7 +3,7 @@
 using namespace std;
 
 vector<int> concatenate(vector<int> arr1, vector<int> arr2, vector<int> arr3){
-    std::vector<int> result;
+    vector<int> result;
     result.reserve(arr1.size() + arr2.size() + arr3.size());
     result.insert(result.end(), arr1.begin(), arr1.end());
     result.insert(result.end(), arr2.begin(), arr2.end());
@@ -19,8 +19,7 @@ vector<int> quicksort(vector<int> data){
 
     int pivotIndex = n/2;
     int pivot = data[pivotIndex];
-    int arrPivot[] = {pivot};
-    std::vector<int> vPivot(arrPivot, arrPivot + sizeof(arrPivot)/sizeof(int));
+    vector<int> vPivot = {pivot};
 
     vector<int> left;
     vector<int> right;
@@ -39,9 +38,7 @@ vector<int> quicksort(vector<int> data){
 }
 
 int main(){
-    int arr[] = {3,7,8,5,2,4};
-    std::vector<int> input(arr, arr + sizeof(arr)/sizeof(int));
-    // std::vector<int> input = {3,7,8,5,2,4};
+    vector<int> input = {3,7,8,5,2,4};
     vector<int> result = quicksort(input);
 
     //Print result

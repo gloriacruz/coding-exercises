@@ -1,3 +1,4 @@
+
 //This algorithm return true/false if a given number is a palindrome
 
 #include <cstdio>
