@@ -1,5 +1,5 @@
 # spare-time-exercises
-C++ code of my spare time coding exercises, including:
+Interview / spare time coding exercises mostly in C++, also Ruby and Python , including:
 
 * Longest increasing subsequence
 
