@@ -1,4 +1,3 @@
-
 //This algorithm returns the Longest Increasing subsequence and its size with NlogN complexity
 
 #include <vector>
