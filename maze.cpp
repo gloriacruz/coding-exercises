@@ -21,6 +21,7 @@ using Path = vector<Pos>;
 
 // int findPositionInPath(Path visited, Pos p){}
 
+//graph DFS
 bool explorePosition(Pos start, Path & solution){
   solution.push_back(start);
 
