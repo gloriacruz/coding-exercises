@@ -33,9 +33,14 @@ public:
     /** Removes a value from the set. Returns true if the set contained the specified element. */
     bool remove(int val) {
         if(hash_table.find(val) != hash_table.end()){
-            int index = hash_table[val];
+            //Swap value to delete and last value inserted to get removal in constant time
+            int index_to_erase = hash_table[val];
+            int last_value = values.back();//used for swapping
+            hash_table[last_value] = index_to_erase;
             hash_table.erase(val);
-            values.erase(values.begin()+index);//maybe not constant
+            values[index_to_erase] = last_value;
+            values.pop_back();
+            //values.erase(values.begin()+index);//not constant
             return true;
         }else{
             return false;
